@@ -1,0 +1,31 @@
+<div class="container">
+<div class="row">
+    <div class="col-md-6">
+        <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Username</span>
+                </div>
+                <input type="text" class="form-control"  [(ngModel)] ="username"  (input)="checkval($event)"   placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+            </div>
+            <div class="col-md-4">               
+                <button type="button" class="btn btn-primary" (click)="reset()" [disabled] = "show">Click Here</button>
+            </div>
+</div>
+<br>
+<div class="row">
+    <h3 >Username is :  {{username}} </h3>
+</div>
+</div> 
+
+
+<div class="container">
+
+<button type="button" class="btn btn-primary" (click)="adddata()">Add Time</button><br>
+
+<h5 *ngIf ="showparagrapgh">Name is : {{name}}</h5><br><br>
+
+
+<h6 *ngFor ="let data of data ; let i = index"     [ngStyle]="{ background : i+1 > 5 ? 'blue' : 'white'  }"   [ngClass]="{textcolor:  i+1 > 5}">{{data}}</h6>
+
+</div>
